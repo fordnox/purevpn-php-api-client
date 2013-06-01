@@ -1,0 +1,19 @@
+{
+    "name": "fordnox/purevpn-php-api-client",
+    "description": "API wrapper for PureVPN",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrius Putna",
+            "email": "fordnox@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-0": {
+            "Fordnox\\": "src/"
+        }
+    }
+}
