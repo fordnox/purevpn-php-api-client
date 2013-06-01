@@ -12,10 +12,9 @@ namespace Fordnox\Purevpn;
 
 class Purevpn
 {
-    protected $apiUrl  = 'http://83.222.249.94/reseller_test/rs/api.php';
-
     protected $options = array(
         'period'        =>  '#30',
+        'api_url'       =>  'http://83.222.249.94/reseller_test/rs/api.php',
         'api_user'      =>  '',
         'api_password'  =>  '',
     );
@@ -124,7 +123,7 @@ class Purevpn
             $params['period'] = $this->options['period'];
         }
 
-        $url = $this->apiUrl;
+        $url = $this->options['api_url'];
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,               $url);
@@ -145,7 +144,7 @@ class Purevpn
         return $this->__parseResponse($result);
     }
 
-    private function __parseResponse($string)
+    protected function __parseResponse($string)
     {
         $xml = @simplexml_load_string($string);
         if(!$xml) {
