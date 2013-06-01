@@ -2,6 +2,7 @@
 
 namespace Fordnox\Test\Purevpn;
 
+use Fordnox\Purevpn\Account;
 use Fordnox\Purevpn\Purevpn;
 
 class PurevpnTest extends \PHPUnit_Framework_TestCase
