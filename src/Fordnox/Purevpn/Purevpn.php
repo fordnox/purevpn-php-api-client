@@ -102,6 +102,11 @@ class Purevpn
         );
         $result = $this->_request($params);
 
+        if($result['status'] == 'Deleted/Not Found') {
+            $account->setStatus('deleted');
+            return $account;
+        }
+
         list($status, $time) = explode(':', $result['status']);
 
         if(strtolower($status) == 'disabled') {
@@ -114,7 +119,7 @@ class Purevpn
 
     protected function _request(array $params)
     {
-        $params['API']          = true;
+        $params['API']          = 'True';
         $params['api_user']     = $this->options['api_user'];
         $params['api_password'] = $this->options['api_password'];
 

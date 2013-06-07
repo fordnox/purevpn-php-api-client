@@ -13,7 +13,7 @@ The recommended way to install library is through [Composer](http://getcomposer.
 
         {
             "require": {
-                "fordnox/purevpn-php-api-client": "1.0"
+                "fordnox/purevpn-php-api-client": "dev-master"
             }
         }
 

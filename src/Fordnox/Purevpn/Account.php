@@ -33,9 +33,9 @@ class Account
     protected $password = null;
 
     /**
-     * @var string - disabled/enabled
+     * @var string - disabled/enabled/deleted
      */
-    protected $status = 'disabled';
+    protected $status = 'deleted';
 
     /**
      * @param null $status
